@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import NavLinks from './NavLinks';
 
 
 const Header = () => {
@@ -25,6 +26,7 @@ const Header = () => {
                 <span className="text-xs text-slate-800">{date}</span>  {/* Bengali Date */}
                 </div>
             </div>
+            <NavLinks />
         </header>
     );
 };
