@@ -2,51 +2,13 @@ import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
 import Link from "next/link";
 import allProductsData from "@/../public/allProducts.json";
+import { Product } from "@/types/types";
+import { toBengaliNumber, getUnitText } from '@/lib/Bengali';
 
-
-interface AllProducts {
-  id: number;          
-  slug: string;            
-  nameBn: string;         
-  categoryIcon: string;   
-  image: string;         
-  unit: string;       
-  today: number;           
-  change: { 
-    dir: string;          
-    pct: number;   
-  };
-}
-
-/**
- * Helper function to convert English digits (0-9) and decimals (.) 
- * into their Bengali numeral equivalents (০-৯).
- */
-const toBengaliNumber = (num: number | string) => {
-  const map: { [key: string]: string } = {
-    '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪',
-    '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯', '.': '.'
-  };
-  return num.toString().replace(/[0-9.]/g, (char) => map[char] || char);
-};
-
-/**
- * Helper function to map English unit strings to clear 
- * Bengali unit descriptions for display.
- */
-const getUnitText = (unit: string) => {
-  switch (unit) {
-    case 'kg': return 'প্রতি কেজি';
-    case 'litre': return 'প্রতি লিটার';
-    case 'dozen': return 'প্রতি ডজন';
-    case 'piece': return 'প্রতি পিস';
-    default: return 'প্রতি কেজি';
-  }
-};
 
 const Marquee = () => {
   // Load local product data into our typed array
-  const headlines: AllProducts[] = allProductsData;
+  const headlines: Product[] = allProductsData;
 
   return (
     
