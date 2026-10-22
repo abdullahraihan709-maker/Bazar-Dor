@@ -11,19 +11,30 @@ const Header = () => {
     // Bengali Date End
 
     return (
-        <header className="relative max-w-7xl px-4 py-4  ">
-            <div className="flex justify-start items-center gap-2">
-                <Image className='border border-solid border-green-600 rounded p-2  '
-                src="/logo-icon.png"
-                alt="Bazar Dor Logo"
-                width={40}
-                height={40}
-                priority
-                />
+        <header className=" bg-white  top-0 z-40 backdrop-blur-md transition-all">
+            
+            <div className='mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-3'>
+                <div className="flex items-center gap-2">
 
-                <div className="flex flex-col items-center  ">
-                <span className="text-2xl font-bold">বাজার দর</span>
-                <span className="text-xs text-slate-800">{date}</span>  {/* Bengali Date */}
+                    <span aria-hidden="true" className="bg-green-100 grid size-10 place-items-center rounded-xl bg-primary text-lg text-primary-content">🛒</span>
+
+                    {/* <Image className='border border-solid border-green-600 rounded p-2  '
+                    src="/logo-icon.png"
+                    alt="Bazar Dor Logo"
+                    width={40}
+                    height={40}
+                    priority
+                    /> */}
+
+                    <div className="leading-tight">
+                    <span className="block text-xl font-bold tracking-tight">বাজার দর</span>
+                    <span className="block text-xs text-base-content/60 ">{date}</span>  {/* Bengali Date */}
+                    </div>
+                </div>
+
+                <div className='ms-auto flex items-center gap-4' >
+                    <button className='text-black font-bold' >সাইন ইন</button>
+                    <button className='bg-green-700 text-white font-bold border rounded-[12px] px-5 py-2'>সাইন আপ</button>
                 </div>
             </div>
             <NavLinks />

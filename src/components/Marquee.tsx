@@ -50,9 +50,9 @@ const Marquee = () => {
 
   return (
     
-    <div className="bg-white border-y border-gray-200 py-2.5 overflow-hidden shadow-xs">
+    <div className="bg-white border-y border-gray-200 py-1 overflow-hidden shadow-xs">
       
-      <MarqueeText direction="right" duration={30}>
+      <MarqueeText direction="right" duration={10}>
 
         <div className="flex items-center gap-8 whitespace-nowrap">
           {headlines.map((h) => {
