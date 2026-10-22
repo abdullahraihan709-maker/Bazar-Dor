@@ -28,10 +28,13 @@ const Hero = () => {
                         চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
                     </p>
 
-                    {/* Call to Action Button */}
-                    <button className="mt-2 bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-2.5 rounded-xl shadow-xs transition-colors cursor-pointer">
+                    {/* Primary CTA Anchor Link to #সব-পণ্য */}
+                    <a
+                        href="#সব-পণ্য"
+                        className="mt-2 bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-2.5 rounded-xl shadow-xs transition-colors cursor-pointer text-center inline-block"
+                    >
                         সব পণ্য দেখুন
-                    </button>
+                    </a>
                 </div>
 
                 {/* Right Side: Hero Basket Illustration */}
