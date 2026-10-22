@@ -18,23 +18,15 @@ const Header = () => {
 
                     <span aria-hidden="true" className="bg-green-100 grid size-10 place-items-center rounded-xl bg-primary text-lg text-primary-content">🛒</span>
 
-                    {/* <Image className='border border-solid border-green-600 rounded p-2  '
-                    src="/logo-icon.png"
-                    alt="Bazar Dor Logo"
-                    width={40}
-                    height={40}
-                    priority
-                    /> */}
-
                     <div className="leading-tight">
-                    <span className="block text-xl font-bold tracking-tight">বাজার দর</span>
-                    <span className="block text-xs text-base-content/60 ">{date}</span>  {/* Bengali Date */}
+                    <span className="block text-2xl font-extrabold tracking-tight">বাজার দর</span>
+                    <span className="block text-xs text-slate-600 text-base-content/60 ">{date}</span>  {/* Bengali Date */}
                     </div>
                 </div>
 
                 <div className='ms-auto flex items-center gap-4' >
                     <button className='text-black font-bold' >সাইন ইন</button>
-                    <button className='bg-green-700 text-white font-bold border rounded-[12px] px-5 py-2'>সাইন আপ</button>
+                    <button className='bg-green-700 text-white font-bold border rounded-xl px-5 py-2'>সাইন আপ</button>
                 </div>
             </div>
             <NavLinks />
