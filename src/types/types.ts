@@ -24,3 +24,10 @@ export interface Product {
   };
   markets: Market[];
 }
+
+export interface Category {
+  id: string;
+  slug: string;
+  nameBn: string;
+  icon: string;
+}
