@@ -23,13 +23,13 @@ const ProductCards: React.FC<ProductCardProps> = ({ product }) => {
         </span>
         <div>
           <h3 className="font-bold text-gray-900 text-base">{product.nameBn}</h3>
-          <p className="text-xs text-gray-500 mt-0.5">{getUnitText(product.unit)}</p>
+          <p className="text-[14px] text-gray-500 mt-0.5">{getUnitText(product.unit)}</p>
         </div>
       </div>
 
       <div className="flex items-end justify-between mt-4 pt-3 border-t border-gray-50">
         <div>
-          <span className="block text-[11px] text-gray-500">আজকের দাম</span>
+          <span className="block text-[14px] text-gray-500">আজকের দাম</span>
           <span className="text-lg font-extrabold text-gray-900">
             {toBengaliNumber(product.today)} টাকা
           </span>
