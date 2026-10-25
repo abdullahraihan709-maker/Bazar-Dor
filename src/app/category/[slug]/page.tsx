@@ -38,3 +38,10 @@ export default async function CategoryPage({ params }: PageProps) {
     />
   );
 }
+
+export function generateStaticParams() {
+  const categories: Category[] = categoriesData;
+  return categories.map(({ slug }) => ({ slug }));
+}
+
+export const dynamicParams = true;

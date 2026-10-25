@@ -2,7 +2,7 @@
 
 export default function CategoryCardsLoading() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-pulse">
+    <div className="mx-auto max-w-6xl px-3 py-8 animate-pulse sm:px-4 lg:px-6">
       {/* Category Banner Card Skeleton */}
       <div className="bg-white rounded-2xl border border-gray-100/90 p-6 sm:p-8 flex items-center space-x-5 shadow-xs mb-6">
         <div className="w-16 h-16 rounded-2xl bg-gray-200 shrink-0"></div>

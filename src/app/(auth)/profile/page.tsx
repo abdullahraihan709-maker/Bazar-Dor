@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession, updateUser, signOut } from "@/lib/auth-client";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -73,8 +73,6 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen bg-[#f8fafc] py-10 px-4 sm:px-6 lg:px-8">
-      <Toaster position="top-center" />
-
       <div className="max-w-3xl mx-auto space-y-6">
         
         {/* Title Section */}

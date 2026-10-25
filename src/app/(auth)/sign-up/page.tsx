@@ -6,7 +6,12 @@ import { useState } from "react";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { signUp, signIn } from "@/lib/auth-client";
 import { Button, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+
+function getReturnTo() {
+    const returnTo = new URLSearchParams(window.location.search).get("returnTo");
+    return returnTo?.startsWith("/") && !returnTo.startsWith("//") ? returnTo : "/";
+}
 
 const SignUpPage = () => {
     const router = useRouter();
@@ -35,7 +40,7 @@ const SignUpPage = () => {
         }, {
             onSuccess: () => {
                 toast.success("সফলভাবে অ্যাকাউন্ট তৈরি হয়েছে!", { id: toastId });
-                router.push("/");
+                router.push(getReturnTo());
                 router.refresh();
             },
             onError: (ctx) => {
@@ -56,7 +61,7 @@ const SignUpPage = () => {
 
         await signIn.social({
             provider: provider,
-            callbackURL: "/",
+            callbackURL: getReturnTo(),
         }, {
             onSuccess: () => {
                 toast.success("সফলভাবে লগইন হয়েছে!", { id: toastId });
@@ -70,8 +75,6 @@ const SignUpPage = () => {
 
     return (
         <div className="min-h-screen bg-[#f0f5f0] flex flex-col justify-between">
-            <Toaster position="top-center" />
-
             {/* Main Form Section */}
             <main className="grow flex items-center justify-center px-4 py-6">
                 <div className="max-w-md w-full bg-white border border-gray-200/80 rounded-3xl p-6 sm:p-8 shadow-sm">

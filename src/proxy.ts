@@ -1,20 +1,22 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
 export async function proxy(request: NextRequest) {
-    const session = await auth.api.getSession({
-        headers: await headers()
-    })
+  const session = await auth.api.getSession({ headers: request.headers });
 
-    if(!session) {
-        return NextResponse.redirect(new URL("/sign-in", request.url));
-    }
+  if (!session) {
+    const signInUrl = new URL("/sign-in", request.url);
+    signInUrl.searchParams.set("auth", "required");
+    signInUrl.searchParams.set(
+      "returnTo",
+      `${request.nextUrl.pathname}${request.nextUrl.search}`,
+    );
+    return NextResponse.redirect(signInUrl);
+  }
 
-    return NextResponse.next();
+  return NextResponse.next();
 }
 
 export const config = {
-// ডায়নামিক প্রোডাক্ট রাউটসহ কভার করার জন্য :path* ব্যবহার করা হয়েছে
-    matcher: ["/product/:path*", "/profile"], // Specify the routes the middleware applies to
+  matcher: ["/product:slug*", "/profile"],
 };

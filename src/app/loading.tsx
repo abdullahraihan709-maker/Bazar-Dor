@@ -5,7 +5,7 @@ export default function HomeLoading() {
     <div className="min-h-screen bg-gray-50/30 animate-pulse">
       {/* 1. Header Skeleton */}
       <header className="border-b border-gray-100 bg-white py-3.5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-3 sm:px-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gray-200 rounded-xl"></div>
             <div className="space-y-1.5">
@@ -22,7 +22,7 @@ export default function HomeLoading() {
 
       {/* 2. Marquee Ticker Skeleton */}
       <div className="bg-white border-b border-gray-100 py-2.5 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 flex items-center gap-8">
+        <div className="mx-auto flex max-w-6xl items-center gap-8 px-3 sm:px-4">
           {[...Array(5)].map((_, i) => (
             <div key={i} className="flex items-center gap-2 shrink-0">
               <div className="w-5 h-5 bg-gray-200 rounded-full"></div>
@@ -34,7 +34,7 @@ export default function HomeLoading() {
 
       {/* 3. NavLinks Category Bar Skeleton */}
       <div className="border-b border-gray-100 bg-white py-2">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-6 overflow-hidden">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-6 overflow-hidden px-3 sm:px-4">
           {[...Array(7)].map((_, i) => (
             <div key={i} className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 rounded-lg shrink-0">
               <div className="w-4 h-4 bg-gray-200 rounded"></div>
@@ -47,7 +47,7 @@ export default function HomeLoading() {
       {/* Main Content Skeleton */}
       <main className="space-y-10 pb-16">
         {/* 4. Hero Section Skeleton */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
+        <div className="mx-auto my-6 max-w-6xl px-3 sm:px-4 lg:px-6">
           <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-4 max-w-xl w-full">
               <div className="h-6 bg-gray-200 rounded-full w-32"></div>
@@ -63,7 +63,7 @@ export default function HomeLoading() {
         </div>
 
         {/* 5. AllProducts & ProductCards Section Skeleton */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <section className="mx-auto max-w-6xl space-y-12 px-3 sm:px-4 lg:px-6">
           
           {/* Section A: আজ দাম বেড়েছে */}
           <div>

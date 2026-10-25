@@ -8,11 +8,11 @@ const Hero = () => {
     });
 
     return (
-        <div className="bg-[#f0f5f0] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
-            <div className="flex flex-col lg:flex-row items-center justify-between bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs gap-8">
+        <div className="mx-auto my-4 max-w-6xl bg-[#f0f5f0] px-3 sm:my-6 sm:px-4">
+            <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-gray-200 bg-white p-5 shadow-xs sm:gap-8 sm:p-10 lg:flex-row lg:p-12">
                 
                 {/* Left Side: Text Content & Button */}
-                <div className="flex flex-col items-start max-w-xl gap-4">
+                <div className="flex w-full max-w-xl flex-col items-start gap-4">
                     {/* Date Badge */}
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
                         {date}

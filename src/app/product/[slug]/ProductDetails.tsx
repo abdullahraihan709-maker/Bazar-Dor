@@ -94,9 +94,9 @@ export default function ProductDetails({
       : "কেজি";
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="mx-auto max-w-6xl px-3 py-8 sm:px-4 lg:px-6">
       {/* Breadcrumb Navigation */}
-      <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500 mb-6">
+      <nav className="mb-6 flex flex-wrap items-center gap-2 text-xs text-gray-500 sm:text-sm">
         <Link href="/" className="hover:text-emerald-700 transition-colors">
           হোম
         </Link>
@@ -112,7 +112,7 @@ export default function ProductDetails({
       </nav>
 
       {/* Top Summary Card */}
-      <div className="bg-white rounded-3xl border border-gray-100/90 p-6 sm:p-8 mb-8 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="mb-8 flex flex-col justify-between gap-6 rounded-3xl border border-gray-100/90 bg-white p-4 shadow-xs sm:p-6 md:flex-row md:items-center lg:p-8">
         {/* Left Info */}
         <div className="flex items-start space-x-5">
           <div className="w-20 h-20 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-4xl shrink-0 shadow-2xs">
@@ -132,7 +132,7 @@ export default function ProductDetails({
         </div>
 
         {/* Right Price Highlight Card */}
-        <div className="bg-gray-50/70 border border-gray-100/80 rounded-2xl p-5 min-w-\\\[190px] text-right flex flex-col items-end justify-center self-stretch md:self-auto">
+        <div className="flex w-full flex-col items-end justify-center self-stretch rounded-2xl border border-gray-100/80 bg-gray-50/70 p-4 text-right sm:p-5 md:w-auto md:min-w-47.5 md:self-auto">
           <span className="text-sm text-gray-700 font-normal mb-1">আজকের দাম</span>
           <div className="flex items-baseline space-x-1.5">
             <span className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">

@@ -33,10 +33,10 @@ export default function CategoryCards({
   const countBn = toBengaliNumber(sortedProducts.length);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="mx-auto max-w-6xl px-3 py-8 sm:px-4 lg:px-6">
       
       {/* Category Banner Card */}
-      <div className="bg-white rounded-2xl border border-gray-100/90 p-6 sm:p-8 flex items-center space-x-5 shadow-xs mb-6">
+      <div className="mb-6 flex items-center gap-4 rounded-2xl border border-gray-100/90 bg-white p-4 shadow-xs sm:gap-5 sm:p-8">
         
         <div className="w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl shrink-0">
           {category.icon}
@@ -55,7 +55,7 @@ export default function CategoryCards({
       </div>
 
       {/* Sort Bar */}
-      <div className="flex flex-warp items-center justify-between gap-2 mb-6">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
 
             <p className="text-[16px] text-slate-600" aria-live="polite" >মোট {countBn}টি পণ্য দেখানো হচ্ছে</p>
 

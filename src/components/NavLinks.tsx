@@ -15,8 +15,8 @@ const NavLinks = () => {
   const pathname = usePathname();
   return (
     <div className="border-t border-gray-100 bg-white">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center gap-6 py-1 overflow-x-auto text-sm font-medium">
+      <nav className="mx-auto max-w-6xl px-2 sm:px-4">
+        <div className="flex items-center justify-start gap-2 overflow-x-auto py-1.5 text-sm font-medium sm:justify-center sm:gap-4" aria-label="পণ্যের বিভাগ">
           {navs.map((n) => {
             const isActive = 
               pathname === `/category/${n.slug}` ||
@@ -26,7 +26,7 @@ const NavLinks = () => {
             <Link
               key={n.id}
               href={`/category/${n.slug}`}
-              className={`flex items-center gap-1.5 text-gray-700 hover:text-green-700  transition-colors whitespace-nowrap px-2 py-1  ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 transition-colors ${
                   isActive
                     ? "bg-[#0a8145] rounded-lg hover:text-slate-200 text-white shadow-sm"
                     : "text-gray-700  hover:bg-gray-100"

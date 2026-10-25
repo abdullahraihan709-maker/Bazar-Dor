@@ -49,16 +49,16 @@ const Header = () => {
 
     return (
         <header className="sticky bg-white top-0 z-40 backdrop-blur-md transition-all border-b border-gray-100">
-            <div className='mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-3'>
-                <Link href="/" className="flex items-center gap-2">
-                    <span aria-hidden="true" className="bg-green-700 grid size-10 place-items-center rounded-xl text-lg">🛒</span>
+            <div className='mx-auto flex w-full max-w-6xl items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3'>
+                <Link href="/" className="flex min-w-0 items-center gap-2">
+                    <span aria-hidden="true" className="grid size-9 shrink-0 place-items-center rounded-xl bg-green-700 text-lg sm:size-10">🛒</span>
                     <div className="leading-tight">
-                        <span className="block text-2xl font-extrabold tracking-tight text-gray-900">বাজার দর</span>
-                        <span className="block text-xs text-slate-600">{date}</span>
+                        <span className="block text-lg font-extrabold tracking-tight text-gray-900 sm:text-2xl">বাজার দর</span>
+                        <span className="block truncate text-[10px] text-slate-600 sm:text-xs">{date}</span>
                     </div>
                 </Link>
 
-                <div className='ms-auto flex items-center gap-3 relative'>
+                <div className='relative ms-auto flex shrink-0 items-center gap-1 sm:gap-3'>
                     {isPending ? (
                         <div className="h-9 w-20 bg-gray-100 animate-pulse rounded-xl"></div>
                     ) : session ? (
@@ -110,10 +110,10 @@ const Header = () => {
                         </div>
                     ) : (
                         <>
-                            <Link href='/sign-in' className='text-black font-bold text-sm px-3 py-2 hover:text-green-700 transition-colors'>
+                            <Link href='/sign-in' className='px-2 py-2 text-xs font-bold text-black transition-colors hover:text-green-700 sm:px-3 sm:text-sm'>
                                 সাইন ইন
                             </Link>
-                            <Link href='/sign-up' className='bg-green-700 hover:bg-green-800 text-white font-bold text-sm border rounded-xl px-5 py-2 transition-colors'>
+                            <Link href='/sign-up' className='rounded-xl border bg-green-700 px-2.5 py-2 text-xs font-bold text-white transition-colors hover:bg-green-800 sm:px-5 sm:text-sm'>
                                 সাইন আপ
                             </Link>
                         </>

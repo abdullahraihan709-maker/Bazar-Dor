@@ -35,7 +35,7 @@ const AllProducts = () => {
   }, [products, sortOption]);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    <section className="mx-auto max-w-6xl px-3 py-8 space-y-10 sm:px-4 lg:px-6">
       
       {/* Section A — “আজ দাম বেড়েছে ▲” */}
       <div>
