@@ -5,17 +5,13 @@ import allProductsData from "@/../public/allProducts.json";
 import { Product } from "@/types/types";
 import { toBengaliNumber, getUnitText } from '@/lib/Bengali';
 
-
 const Marquee = () => {
   // Load local product data into our typed array
-  const headlines: Product[] = allProductsData;
+  const headlines: Product[] = allProductsData as Product[];
 
   return (
-    
     <div className="bg-white border-y border-gray-200 py-1 overflow-hidden shadow-xs">
-      
       <MarqueeText direction="right" duration={10}>
-
         <div className="flex items-center gap-8 whitespace-nowrap">
           {headlines.map((h) => {
             // Determine price movement flags for conditional styling and symbols
@@ -26,7 +22,7 @@ const Marquee = () => {
             return (
               <Link
                 key={h.id}
-                href={`/category/${h.slug}`}
+                href={`/category/${h.category}`}
                 className="flex items-center gap-2 text-gray-800 hover:text-green-700 transition-colors px-2"
               >
                 {/* Product Emoji / Icon */}
@@ -40,13 +36,13 @@ const Marquee = () => {
                   {toBengaliNumber(h.today)} টাকা/{getUnitText(h.unit)}
                 </span>
 
-                {/* Percentage Change Badge with color coding (Green for up, Red for down, Gray for flat) */}
+                {/* Percentage Change Badge with color coding */}
                 <span
                   className={`flex items-center gap-0.5 text-xs font-semibold px-1.5 py-0.5 rounded ${
                     isUp
-                      ? 'text-green-600 bg-green-50'
+                      ? 'text-red-600 bg-green-50'
                       : isDown
-                      ? 'text-red-600 bg-red-50'
+                      ? 'text-green-600 bg-red-50'
                       : 'text-gray-500 bg-gray-100'
                   }`}
                 >
@@ -58,9 +54,7 @@ const Marquee = () => {
             );
           })}
         </div>
-        
       </MarqueeText>
-    
     </div>
   );
 };
