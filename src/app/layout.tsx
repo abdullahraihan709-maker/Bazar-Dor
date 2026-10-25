@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Marquee from "@/components/Marquee";
 import Footer from "@/components/Footer";
+import ToastProvider from "@/components/ToastProvider";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="bn"
       data-theme="light"
       className={`${notoSerifBengali.className} h-full antialiased`}
     >
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Marquee />
         <main className="flex-1" >{children}</main>
         <Footer />
+        <ToastProvider />
       </body>
     </html>
   );
