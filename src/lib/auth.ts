@@ -13,6 +13,13 @@ export const auth = betterAuth({
         enabled: true,
     },  
 
+    // অ্যাকাউন্ট লিংকিং এনাবল করার জন্য এই অংশটি যোগ করুন
+    account: {
+        accountLinking: {
+            enabled: true,
+        },
+    },
+
 
     socialProviders: {
         google: {
