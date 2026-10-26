@@ -9,6 +9,9 @@ const db = client.db();
 
 
 export const auth = betterAuth({
+// ১. আপনার সঠিক প্রোডাকশন ডোমেইন এখানে baseURL হিসেবে দিন
+    baseURL: process.env.BETTER_AUTH_URL || "https://bazar-dor-two-bay.vercel.app",
+
     trustedOrigins: [
         "https://bazar-dor-two-bay.vercel.app",
     ],
